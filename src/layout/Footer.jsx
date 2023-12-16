@@ -2,7 +2,7 @@ import { Stack, Typography } from "@mui/material";
 
 export default function Footer() {
   return (
-    <Stack direction={'column'} gap={1} justifyContent={'center'} alignItems={'center'}>
+    <Stack direction={'row'} gap={1} justifyContent={'center'} alignItems={'center'}>
       <Stack direction={'row'} gap={1}>
       <Typography fontSize={'13px'}>
         <a style={{

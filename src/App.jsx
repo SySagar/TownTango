@@ -1,7 +1,22 @@
 import { useTheme } from '@emotion/react'
 import './App.css'
-import { Button, Stack } from '@mui/material'
-import { Typography } from '@mui/material'
+import { Stack } from '@mui/material'
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import RootLayout from './layout/RootLayout'
+import {Home} from './app/index'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
+  }
+]);
 
 function App() {
 
@@ -9,10 +24,7 @@ function App() {
 
   return (
     <Stack sx={{background:theme.palette.background.default}} minHeight={'100vh'}>
-    <Typography>
-    hello world
-    </Typography>
-    <Button variant='contained'>heelo</Button>
+    <RouterProvider router={router} />
     </Stack>
   )
 }

@@ -1,29 +1,27 @@
 import { Stack } from "@mui/material"
-import { motion, Variants } from "framer-motion"
+import { motion} from "framer-motion"
 
-interface IChildren {
-    children: JSX.Element
-}
 
-const variants: Variants = {
+const variants= {
 	hidden: {
-		x: 0,
-		y: -200,
 		opacity: 0
 	},
 	enter: {
-		x: 0,
-		y: 0,
-		opacity: 1
+		opacity: 1,
+		transition: {
+			duration: 0.5,
+		}
 	},
 	exit: {
-		x: 0,
-		y: 200,
-		opacity: 0
+		opacity: 0,
+		transition: {
+			duration: 0.5,
+		}
 	}
 }
 
-const Page = ({ children }: IChildren): JSX.Element => {
+// eslint-disable-next-line react/prop-types
+const Page = ({ children })=> {
 	return (
 		<Stack
 			component={motion.main}

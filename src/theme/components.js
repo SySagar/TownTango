@@ -17,6 +17,17 @@ const componentOverrides = {
         borderRadius: "6px",
         textTransform: "none",
       },
+      text:{
+        color:'#232946'
+      },
+      outlined:{
+        color:'#232946'
+      },
+      contained:{
+        ':hover':{
+          backgroundColor:'#eebbc3'
+        }
+      }
     },
   },
   MuiOutlinedInput: {
